@@ -11,6 +11,7 @@ import { Subscription } from "rxjs";
 export class HeaderComponent implements OnInit, OnDestroy {
   private userSub: Subscription;
   isAuthenticated = false;
+  private collapsed = false;
 
   constructor(
     private dataStorageService: DataStorageService,
@@ -21,6 +22,10 @@ export class HeaderComponent implements OnInit, OnDestroy {
     this.userSub = this.authService.user.subscribe((user) => {
       this.isAuthenticated = !!user;
     });
+  }
+
+  onToggleNavbar() {
+    this.collapsed = !this.collapsed;
   }
 
   onSaveData() {
