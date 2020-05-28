@@ -4,6 +4,7 @@ import { catchError, tap } from "rxjs/operators";
 import { throwError, BehaviorSubject } from "rxjs";
 import { User } from "./user.model";
 import { Router } from "@angular/router";
+import { environment } from "../../environments/environment";
 
 export interface AuthResponseData {
   idToken: string;
@@ -18,7 +19,7 @@ export interface AuthResponseData {
   providedIn: "root",
 })
 export class AuthService {
-  private api_key = "AIzaSyAnMCmTaJB0UibGqgyyRW5lJOsBh-jEbKM";
+  private api_key = environment.api_key;
   user = new BehaviorSubject<User>(null);
   private tokenExpirationTimer: any;
 
