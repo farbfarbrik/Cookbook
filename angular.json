@@ -149,9 +149,7 @@
           "options": {
             "browserTarget": "Cookbook:build:production",
             "serverTarget": "Cookbook:server:production",
-            "routes": [
-              "/"
-            ]
+            "routes": ["/"]
           },
           "configurations": {
             "production": {}

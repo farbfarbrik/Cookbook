@@ -1,0 +1,44 @@
+{
+  "header": {
+    "recipeBook": "Kochbuch",
+    "recipes": "Rezepte",
+    "authenticate": "Anmelden",
+    "shoppingList": "Einkaufsliste",
+    "logout": "Ausloggen",
+    "manage": "Verwalten",
+    "saveData": "Daten speichern",
+    "fetchData": "Daten laden",
+    "language": "Sprache",
+    "german": "Deutsch",
+    "english": "Englisch"
+  },
+  "auth": {
+    "email": "Email",
+    "password": "Passwort",
+    "login": "Einloggen",
+    "signup": "Registrieren",
+    "switchTo": "Wechsel zu:  "
+  },
+  "recipes": {
+    "manageRecipe": "Rezept verwalten",
+    "addToShoppingList": "Zu Einkaufsliste hinzufügen",
+    "editRecipe": "Rezept bearbeiten",
+    "deleteRecipe": "Rezept löschen",
+    "save": "Speichern",
+    "cancel": "Abbrechen",
+    "name": "Name",
+    "imageUrl": "Bild URL",
+    "description": "Beschreibung",
+    "addIngredient": "Zutat hinzufügen",
+    "newRecipe": "Neues Rezept",
+    "pleaseSelectARecipe": "Bitte wähle ein Rezept aus!"
+  },
+  "shoppingList": {
+    "name": "Name",
+    "amount": "Anzahl",
+    "update": "Aktualisieren",
+    "add": "Hinzufügen",
+    "delete": "Löschen",
+    "clear": "Eingabefeld löschen"
+  }
+}

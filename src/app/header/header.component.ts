@@ -6,6 +6,7 @@ import { map } from "rxjs/operators";
 import * as fromApp from "../store/app.reducer";
 import * as AuthActions from "../auth/store/auth.actions";
 import * as RecipesActions from "../recipes/store/recipes.action";
+import * as HeaderActions from "./store/header.actions";
 
 @Component({
   selector: "app-header",
@@ -46,6 +47,10 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   onLogout() {
     this.store.dispatch(AuthActions.logout());
+  }
+
+  onSetLanguage(language: string) {
+    this.store.dispatch(HeaderActions.setLanguage({ language: language }));
   }
 
   ngOnDestroy() {

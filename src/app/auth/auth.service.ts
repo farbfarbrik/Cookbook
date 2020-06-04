@@ -3,6 +3,7 @@ import { Store } from "@ngrx/store";
 
 import * as fromApp from "../store/app.reducer";
 import * as AuthActions from "./store/auth.actions";
+import { TranslateService } from "@ngx-translate/core";
 
 @Injectable({
   providedIn: "root",
@@ -10,7 +11,10 @@ import * as AuthActions from "./store/auth.actions";
 export class AuthService {
   private tokenExpirationTimer: any;
 
-  constructor(private store: Store<fromApp.AppState>) {}
+  constructor(
+    private store: Store<fromApp.AppState>,
+    private translateService: TranslateService
+  ) {}
 
   setLogoutTimer(expirationDuration: number) {
     this.tokenExpirationTimer = setTimeout(() => {

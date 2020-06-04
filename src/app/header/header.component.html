@@ -1,35 +1,62 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a routerLink="/" class="navbar-brand">Recipe Book</a>
+      <a routerLink="/" class="navbar-brand">{{
+        "header.recipeBook" | translate
+      }}</a>
     </div>
 
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
         <li routerLinkActive="active" *ngIf="isAuthenticated">
-          <a routerLink="/recipes">Recipes</a>
+          <a routerLink="/recipes">{{ "header.recipes" | translate }}</a>
         </li>
         <li routerLinkActive="active" *ngIf="!isAuthenticated">
-          <a routerLink="/auth">Authenticate</a>
+          <a routerLink="/auth"> {{ "header.authenticate" | translate }} </a>
         </li>
         <li routerLinkActive="active" *ngIf="isAuthenticated">
-          <a routerLink="/shopping-list">Shopping List</a>
+          <a routerLink="/shopping-list">{{
+            "header.shoppingList" | translate
+          }}</a>
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown" appDropdown>
+          <a style="cursor: pointer;" class="dropdown-toggle" role="button"
+            >{{ "header.language" | translate }} <span class="caret"></span
+          ></a>
+          <ul class="dropdown-menu dropdown-menu-right" style="width: auto;">
+            <li>
+              <a style="cursor: pointer;" (click)="onSetLanguage('de')">{{
+                "header.german" | translate
+              }}</a>
+            </li>
+            <li>
+              <a style="cursor: pointer;" (click)="onSetLanguage('en')">{{
+                "header.english" | translate
+              }}</a>
+            </li>
+          </ul>
+        </li>
         <li *ngIf="isAuthenticated">
-          <a style="cursor: pointer;" (click)="onLogout()">Logout</a>
+          <a style="cursor: pointer;" (click)="onLogout()">{{
+            "header.logout" | translate
+          }}</a>
         </li>
         <li class="dropdown" appDropdown *ngIf="isAuthenticated">
-          <a style="cursor: pointer;" class="dropdown-toggle" role="button"
-            >Manage <span class="caret"></span
+          <a style="cursor: pointer;" class="dropdown-toggle" role="button">
+            {{ "header.manage" | translate }} <span class="caret"></span
           ></a>
           <ul class="dropdown-menu">
             <li>
-              <a style="cursor: pointer;" (click)="onSaveData()">Save Data</a>
+              <a style="cursor: pointer;" (click)="onSaveData()"
+                >{{ "header.saveData" | translate }}
+              </a>
             </li>
             <li>
-              <a style="cursor: pointer;" (click)="onFetchData()">Fetch Data</a>
+              <a style="cursor: pointer;" (click)="onFetchData()">{{
+                "header.fetchData" | translate
+              }}</a>
             </li>
           </ul>
         </li>

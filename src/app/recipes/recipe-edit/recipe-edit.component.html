@@ -8,17 +8,17 @@
             class="btn btn-success"
             [disabled]="!recipeForm.valid"
           >
-            Save
+            {{ "recipes.save" | translate }}
           </button>
           <button type="button" class="btn btn-danger" (click)="onCancel()">
-            Cancel
+            {{ "recipes.cancel" | translate }}
           </button>
         </div>
       </div>
       <div class="row">
         <div class="col-xs-12">
           <div class="form-group">
-            <label for="name">Name</label>
+            <label for="name">{{ "recipes.name" | translate }}</label>
             <input
               type="text"
               id="name"
@@ -31,7 +31,7 @@
       <div class="row">
         <div class="col-xs-12">
           <div class="form-group">
-            <label for="imagePath">Image URL</label>
+            <label for="imagePath">{{ "recipes.imageUrl" | translate }}</label>
             <input
               type="text"
               id="imagePath"
@@ -50,7 +50,9 @@
       <div class="row">
         <div class="col-xs-12">
           <div class="form-group">
-            <label for="description">Name</label>
+            <label for="description">{{
+              "recipes.description" | translate
+            }}</label>
             <textarea
               type="text"
               id="description"
@@ -97,7 +99,7 @@
                 class="btn btn-success"
                 (click)="onAddIngredient()"
               >
-                Add Ingredient
+                {{ "recipes.addIngredient" | translate }}
               </button>
             </div>
           </div>

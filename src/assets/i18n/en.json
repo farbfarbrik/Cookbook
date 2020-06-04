@@ -1,0 +1,44 @@
+{
+  "header": {
+    "recipeBook": "Recipe Book",
+    "recipes": "Recipes",
+    "authenticate": "Authenticate",
+    "shoppingList": "Shopping List",
+    "logout": "Logout",
+    "manage": "Manage",
+    "saveData": "Save Data",
+    "fetchData": "Fetch Data",
+    "language": "Language",
+    "german": "German",
+    "english": "English"
+  },
+  "auth": {
+    "email": "Email",
+    "password": "Password",
+    "login": "Login",
+    "signup": "SignUp",
+    "switchTo": "Switch to "
+  },
+  "recipes": {
+    "manageRecipe": "Manage Recipe",
+    "addToShoppingList": "Add to Shopping List",
+    "editRecipe": "Edit Recipe",
+    "deleteRecipe": "Delete Recipe",
+    "save": "Save",
+    "cancel": "Cancel",
+    "name": "Name",
+    "imageUrl": "Image URL",
+    "description": "Description",
+    "addIngredient": "Add Ingredient",
+    "newRecipe": "New Recipe",
+    "pleaseSelectARecipe": "Please select a Recipe!"
+  },
+  "shoppingList": {
+    "name": "Name",
+    "amount": "Amount",
+    "update": "Update",
+    "add": "Add",
+    "delete": "Delete",
+    "clear": "Clear"
+  }
+}

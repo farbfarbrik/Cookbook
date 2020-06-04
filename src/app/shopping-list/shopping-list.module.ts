@@ -6,6 +6,7 @@ import { ShoppingListComponent } from "./shopping-list.component";
 import { ShoppingEditComponent } from "./shopping-edit/shopping-edit.component";
 import { AuthGuard } from "../auth/auth.guard";
 import { SharedModule } from "../shared/shared.module";
+import { TranslateModule } from "@ngx-translate/core";
 
 const routes: Routes = [
   {
@@ -17,6 +18,11 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [ShoppingListComponent, ShoppingEditComponent],
-  imports: [FormsModule, RouterModule.forChild(routes), SharedModule],
+  imports: [
+    FormsModule,
+    RouterModule.forChild(routes),
+    SharedModule,
+    TranslateModule.forChild(),
+  ],
 })
 export class ShoppingListModule {}

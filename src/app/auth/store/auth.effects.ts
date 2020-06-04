@@ -133,15 +133,17 @@ export class AuthEffects {
     )
   );
 
-  authLogout$ = createEffect(() =>
-    this.actions$.pipe(
-      ofType(AuthActions.logout),
-      tap(() => {
-        this.authService.clearLogoutTimer();
-        localStorage.removeItem("userData");
-        this.router.navigate(["/auth"]);
-      })
-    )
+  authLogout$ = createEffect(
+    () =>
+      this.actions$.pipe(
+        ofType(AuthActions.logout),
+        tap(() => {
+          this.authService.clearLogoutTimer();
+          localStorage.removeItem("userData");
+          this.router.navigate(["/auth"]);
+        })
+      ),
+    { dispatch: false }
   );
 
   autoLogin$ = createEffect(() =>

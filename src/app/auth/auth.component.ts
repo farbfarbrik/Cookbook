@@ -5,6 +5,7 @@ import { Store } from "@ngrx/store";
 
 import * as fromApp from "../store/app.reducer";
 import * as AuthActions from "./store/auth.actions";
+import { TranslateService } from "@ngx-translate/core";
 
 @Component({
   selector: "app-auth",
@@ -12,9 +13,16 @@ import * as AuthActions from "./store/auth.actions";
 })
 export class AuthComponent implements OnInit, OnDestroy {
   isLoginMode = true;
+  displayedMode: string;
   isLoading = false;
   error: string = null;
   private storeSub: Subscription;
+
+  translationSub: Subscription;
+  emailLabel: string;
+  passwordLabel: string;
+  loginLabel: string;
+  signupLabel: string;
 
   constructor(private store: Store<fromApp.AppState>) {}
 
@@ -23,6 +31,8 @@ export class AuthComponent implements OnInit, OnDestroy {
       this.isLoading = authState.loading;
       this.error = authState.authError;
     });
+
+    this.displayedMode = this.loginLabel;
   }
 
   onSwitchMode() {
